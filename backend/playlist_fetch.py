@@ -22,6 +22,9 @@ def get_spotify_client(redirect_uri=None, open_browser=False):
     """
     Create and return a Spotify client with OAuth authentication.
     
+    For server environments (production), uses client credentials flow.
+    For local development with private playlists, can use OAuth flow.
+    
     Args:
         redirect_uri: Optional redirect URI (defaults to env var or default)
         open_browser: Whether to open browser for auth (default False for API use)
@@ -29,16 +32,30 @@ def get_spotify_client(redirect_uri=None, open_browser=False):
     Returns:
         spotipy.Spotify client instance
     """
-    redirect_uri = redirect_uri or os.getenv('SPOTIFY_REDIRECT_URI', 'http://127.0.0.1:3000/callback')
+    client_id = os.getenv('SPOTIFY_CLIENT_ID')
+    client_secret = os.getenv('SPOTIFY_CLIENT_SECRET')
     
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-        client_id=os.getenv('SPOTIFY_CLIENT_ID'),
-        client_secret=os.getenv('SPOTIFY_CLIENT_SECRET'),
-        redirect_uri=redirect_uri,
-        scope='playlist-read-private playlist-read-collaborative',
-        cache_path='.spotify_cache',
-        open_browser=open_browser
-    ))
+    # Check if we're in a server environment (Railway, etc.)
+    # Use ClientCredentials for server (works for public playlists)
+    is_server = os.getenv('RAILWAY_ENVIRONMENT') or os.getenv('PORT')
+    
+    if is_server or not redirect_uri:
+        # Use client credentials flow (no user auth needed, works for public playlists)
+        sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
+            client_id=client_id,
+            client_secret=client_secret
+        ))
+    else:
+        # Use OAuth flow for local development with private playlists
+        redirect_uri = redirect_uri or os.getenv('SPOTIFY_REDIRECT_URI', 'http://127.0.0.1:3000/callback')
+        sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
+            client_id=client_id,
+            client_secret=client_secret,
+            redirect_uri=redirect_uri,
+            scope='playlist-read-private playlist-read-collaborative',
+            cache_path='.spotify_cache',
+            open_browser=open_browser
+        ))
     return sp
 
 def extract_playlist_id(playlist_url):
