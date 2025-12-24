@@ -1,0 +1,5 @@
+spotipy>=2.23.0
+python-dotenv>=1.0.0
+lyricsgenius>=3.0.0
+transformers>=4.30.0
+torch>=2.0.0
