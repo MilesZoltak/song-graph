@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react';
 import axios from 'axios';
+import apiClient from '../api';
 import type { PlaylistData, PlaylistMetadata } from '../types';
 
 interface PlaylistInputProps {
@@ -30,7 +31,7 @@ function PlaylistInput({ onPlaylistProcessed, onMetadataFetched, onTracksFetched
 
     try {
       // Phase 1: Fetch metadata + tracks in a single request
-      const response = await axios.get('/api/playlist-with-tracks', {
+      const response = await apiClient.get('/api/playlist-with-tracks', {
         params: { playlist_url: playlistUrl.trim() }
       });
       
@@ -53,7 +54,7 @@ function PlaylistInput({ onPlaylistProcessed, onMetadataFetched, onTracksFetched
       // Phase 2: Start feature processing (BPM + sentiment in parallel)
       setLoadingProcessing(true);
       
-      const jobResponse = await axios.post<{ job_id: string }>('/api/process-features', {
+      const jobResponse = await apiClient.post<{ job_id: string }>('/api/process-features', {
         tracks: tracks,
         playlist_name: playlist_name
       });
@@ -61,7 +62,8 @@ function PlaylistInput({ onPlaylistProcessed, onMetadataFetched, onTracksFetched
       const jobId = jobResponse.data.job_id;
       
       // Connect to progress stream for real-time updates
-      const eventSource = new EventSource(`/api/progress-stream/${jobId}`);
+      const apiBaseUrl = import.meta.env.VITE_API_URL || '';
+      const eventSource = new EventSource(`${apiBaseUrl}/api/progress-stream/${jobId}`);
       
       eventSource.onmessage = (event) => {
         const data = JSON.parse(event.data);
