@@ -1,51 +1,41 @@
 import React from 'react';
 
 interface ProgressBarProps {
-  stage: string;
+  label: string;
   current: number;
   total: number;
-  message?: string;
+  complete: boolean;
 }
 
-function ProgressBar({ stage, current, total, message }: ProgressBarProps) {
+function ProgressBar({ label, current, total, complete }: ProgressBarProps) {
   const percentage = total > 0 ? Math.round((current / total) * 100) : 0;
-  
-  const getStageLabel = (stage: string): string => {
-    switch (stage) {
-      case 'tracks':
-        return 'Fetching tracks';
-      case 'audio_features':
-        return 'Fetching audio features';
-      case 'lyrics':
-        return 'Fetching lyrics';
-      case 'sentiment':
-        return 'Analyzing sentiment';
-      case 'complete':
-        return 'Complete';
-      case 'error':
-        return 'Error';
-      default:
-        return 'Processing';
-    }
-  };
 
   return (
-    <div className="w-full max-w-4xl mx-auto mb-6 bg-emerald-950/30 backdrop-blur-sm rounded-xl border border-emerald-800/30 p-6">
+    <div className={`w-full max-w-4xl mx-auto bg-emerald-950/30 backdrop-blur-sm rounded-xl border ${
+      complete ? 'border-green-500/50' : 'border-emerald-800/30'
+    } p-6 transition-all duration-300`}>
       <div className="flex items-center justify-between mb-2">
-        <span className="text-emerald-200 font-medium">{getStageLabel(stage)}</span>
+        <span className={`font-medium ${complete ? 'text-green-400' : 'text-emerald-200'}`}>
+          {label}
+          {complete && (
+            <span className="ml-2 inline-block">✓</span>
+          )}
+        </span>
         <span className="text-emerald-300 text-sm">{current} / {total}</span>
       </div>
       
-      {message && (
-        <p className="text-emerald-300/70 text-sm mb-3">{message}</p>
-      )}
-      
       <div className="w-full bg-emerald-900/30 rounded-full h-3 overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-emerald-600 to-green-600 transition-all duration-300 ease-out rounded-full"
+          className={`h-full transition-all duration-300 ease-out rounded-full ${
+            complete 
+              ? 'bg-gradient-to-r from-green-600 to-emerald-600' 
+              : 'bg-gradient-to-r from-emerald-600 to-green-600'
+          }`}
           style={{ width: `${percentage}%` }}
         >
-          <div className="h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+          {!complete && (
+            <div className="h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+          )}
         </div>
       </div>
       

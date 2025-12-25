@@ -67,9 +67,12 @@ function PlaylistInput({ onPlaylistProcessed, onMetadataFetched, onTracksFetched
       
       eventSource.onmessage = (event) => {
         const data = JSON.parse(event.data);
+        console.log('[SSE] Received:', data.type, data.field || data.stage, data.track_update?.track_id || '');
         
         // Handle track_update messages (sent individually for BPM and sentiment)
         if (data.type === 'track_update' && data.track_update) {
+          console.log('[SSE] Track update:', data.field, 'track_id:', data.track_update.track_id, 
+            'tempo:', data.track_update.tempo, 'sentiment:', data.track_update.sentiment_score);
           onProgressUpdate?.({
             stage: data.stage || 'processing',
             current: 0,
@@ -81,11 +84,20 @@ function PlaylistInput({ onPlaylistProcessed, onMetadataFetched, onTracksFetched
         
         // Handle progress updates
         if (data.type === 'progress' || data.stage) {
+          console.log('[SSE] Progress update:', data.stage, data.current, '/', data.total);
           onProgressUpdate?.(data);
         }
         
         // If complete, get final data
         if (data.stage === 'complete') {
+          console.log('[SSE] Complete! Tracks received:', data.tracks?.length);
+          // Log which tracks have tempo and sentiment
+          if (data.tracks) {
+            const tempoCount = data.tracks.filter((t: any) => t.tempo !== undefined).length;
+            const sentimentCount = data.tracks.filter((t: any) => t.sentiment_score !== undefined).length;
+            console.log('[SSE] Final data - tempo:', tempoCount, '/', data.tracks.length, 
+              'sentiment:', sentimentCount, '/', data.tracks.length);
+          }
           eventSource.close();
           setLoadingProcessing(false);
           
@@ -102,6 +114,7 @@ function PlaylistInput({ onPlaylistProcessed, onMetadataFetched, onTracksFetched
         
         // Handle errors
         if (data.stage === 'error' || data.error) {
+          console.log('[SSE] Error:', data.error || data.message);
           eventSource.close();
           setLoadingProcessing(false);
           setError(data.error || data.message || 'Processing failed');

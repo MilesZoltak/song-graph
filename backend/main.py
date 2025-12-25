@@ -281,13 +281,7 @@ async def process_playlist_with_progress(playlist_url: str, job_id: str):
         tracks = add_sentiment_to_tracks(tracks, sent_classifier, progress_callback=sentiment_progress)
         print(f"✓ Sentiment analysis complete for {len(tracks)} tracks\n")
         
-        # Step 5: Normalize sentiment scores (playlist-relative)
-        print(f"\nStep 5: Normalizing sentiment scores across playlist...")
-        tracks = normalize_sentiment_scores(tracks)
-        progress_store[job_id]['tracks'] = tracks
-        print(f"✓ Sentiment normalization complete\n")
-        
-        # Step 6: Save to JSON
+        # Step 5: Save to JSON
         from .pipeline import save_playlist_json
         output_file = save_playlist_json(tracks, playlist_name)
         
@@ -444,9 +438,6 @@ async def process_features_with_progress(tracks: List[Dict[str, Any]], job_id: s
                 track.update(sentiment_results[i])
             final_tracks.append(track)
         
-        # Normalize sentiment scores
-        final_tracks = normalize_sentiment_scores(final_tracks)
-        
         # Save to JSON
         from .pipeline import save_playlist_json
         playlist_name = progress_store[job_id].get('playlist_name', 'Unknown Playlist')
@@ -564,6 +555,7 @@ async def stream_progress(job_id: str):
                                 'tempo': tempo,
                                 'audio_features_error': audio_error
                             }
+                            print(f"[SSE] Sending BPM update for track {track_id}: tempo={tempo}, error={audio_error}")
                             yield f"data: {json.dumps({
                                 'type': 'track_update',
                                 'field': 'tempo',
@@ -583,12 +575,17 @@ async def stream_progress(job_id: str):
                                 'sentiment_label': track.get('sentiment_label'),
                                 'sentiment_error': sentiment_error
                             }
+                            print(f"[SSE] Sending sentiment update for track {track_id}: score={sentiment_score}, error={sentiment_error}")
                             yield f"data: {json.dumps({
                                 'type': 'track_update',
                                 'field': 'sentiment',
                                 'track_update': track_update
                             })}\n\n"
                             last_sentiment_updates.add(track_id)
+                
+                # Log current totals every 5 seconds (not every iteration to avoid spam)
+                if len(last_bpm_updates) > 0 or len(last_sentiment_updates) > 0:
+                    print(f"[SSE] Progress: BPM sent={len(last_bpm_updates)}/{len(tracks)}, Sentiment sent={len(last_sentiment_updates)}/{len(tracks)}")
             
             # Send initial tracks as soon as they're available
             if tracks and len(tracks) > 0 and not tracks_sent:
@@ -622,6 +619,18 @@ async def stream_progress(job_id: str):
             
             # Stop if complete or error
             if stage in ['complete', 'error']:
+                # Make sure ALL track updates have been sent before completing
+                # This prevents the race condition where stage=complete but not all SSE updates sent
+                all_bpm_sent = len(last_bpm_updates) >= len(tracks)
+                all_sentiment_sent = len(last_sentiment_updates) >= len(tracks)
+                
+                if not all_bpm_sent or not all_sentiment_sent:
+                    # Still have updates to send, don't break yet
+                    print(f"[SSE] Stage is {stage} but waiting for updates: BPM {len(last_bpm_updates)}/{len(tracks)}, Sentiment {len(last_sentiment_updates)}/{len(tracks)}")
+                    await asyncio.sleep(0.1)  # Small delay to let updates accumulate
+                    continue
+                
+                print(f"[SSE] All updates sent, sending complete message")
                 # Send final complete message with all tracks (including sentiment)
                 complete_data = {
                     'type': 'progress',

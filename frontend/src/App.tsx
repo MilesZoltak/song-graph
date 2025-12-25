@@ -12,8 +12,8 @@ function App() {
   const [playlistMetadata, setPlaylistMetadata] = useState<PlaylistMetadata | null>(null);
   const [loadingMetadata, setLoadingMetadata] = useState<boolean>(false);
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
-  const [progress, setProgress] = useState<{ stage: string; current: number; total: number; message?: string } | null>(null);
-  const [useRelativeSentiment, setUseRelativeSentiment] = useState(true); // true = playlist-relative, false = absolute
+  const [tempoProgress, setTempoProgress] = useState<{ current: number; total: number; complete: boolean } | null>(null);
+  const [sentimentProgress, setSentimentProgress] = useState<{ current: number; total: number; complete: boolean } | null>(null);
   
   // Ref to always have access to latest playlistData (avoids stale closure issues)
   const playlistDataRef = useRef<PlaylistData | null>(null);
@@ -49,27 +49,60 @@ function App() {
   };
 
   const handleProgressUpdate = (progressUpdate: { stage: string; current: number; total: number; message?: string; track_update?: any }) => {
-    setProgress(progressUpdate);
-    
     // Update individual track if track_update is present
-    // Use ref to get latest playlistData (avoids stale closure issue)
     if (progressUpdate.track_update && playlistDataRef.current) {
-      // Use functional update to ensure we're working with latest state
       setPlaylistData(prevData => {
-        if (!prevData) return prevData;
+        if (!prevData) {
+          console.log('[App] handleProgressUpdate: prevData is null, skipping update');
+          return prevData;
+        }
+        
+        const trackUpdate = progressUpdate.track_update;
+        const foundTrack = prevData.tracks.find(t => t.track_id === trackUpdate.track_id);
+        if (!foundTrack) {
+          console.log('[App] Track not found in current data:', trackUpdate.track_id);
+        }
         
         const updatedTracks = prevData.tracks.map(track => 
-          track.track_id === progressUpdate.track_update.track_id
-            ? { ...track, ...progressUpdate.track_update }
+          track.track_id === trackUpdate.track_id
+            ? { ...track, ...trackUpdate }
             : track
         );
         
-        // Return a completely new object to force re-render
+        // Count how many tracks have been processed (have BPM and sentiment or errors)
+        const bpmCompleted = updatedTracks.filter(t => t.tempo !== undefined || t.audio_features_error).length;
+        const sentimentCompleted = updatedTracks.filter(t => t.sentiment_score !== undefined || t.sentiment_error).length;
+        const totalTracks = updatedTracks.length;
+        
+        console.log(`[App] Track update applied. BPM: ${bpmCompleted}/${totalTracks}, Sentiment: ${sentimentCompleted}/${totalTracks}`);
+        
+        // Update tempo progress
+        setTempoProgress({
+          current: bpmCompleted,
+          total: totalTracks,
+          complete: bpmCompleted === totalTracks
+        });
+        
+        // Update sentiment progress
+        setSentimentProgress({
+          current: sentimentCompleted,
+          total: totalTracks,
+          complete: sentimentCompleted === totalTracks
+        });
+        
         return {
           ...prevData,
           tracks: updatedTracks
         };
       });
+    } else {
+      // Initialize progress bars when tracks are first loaded
+      if (progressUpdate.stage === 'tracks' || progressUpdate.stage === 'processing') {
+        const total = progressUpdate.total || 0;
+        console.log(`[App] Initializing progress bars with ${total} tracks`);
+        setTempoProgress({ current: 0, total, complete: false });
+        setSentimentProgress({ current: 0, total, complete: false });
+      }
     }
   };
 
@@ -120,15 +153,52 @@ function App() {
             {/* Show shimmer while loading metadata */}
             {loadingMetadata && <Shimmer />}
             
-            {/* Show progress bar when processing */}
-            {progress && progress.stage !== 'complete' && (
-              <div className="mb-8">
-                <ProgressBar
-                  stage={progress.stage}
-                  current={progress.current}
-                  total={progress.total}
-                  message={progress.message}
-                />
+            {/* Show progress bars when processing */}
+            {(tempoProgress || sentimentProgress) && !(tempoProgress?.complete && sentimentProgress?.complete) && (
+              <div className="mb-8 space-y-4">
+                {/* Show tempo progress */}
+                {tempoProgress && (
+                  tempoProgress.complete ? (
+                    // Show completion message only if sentiment is still working
+                    sentimentProgress && !sentimentProgress.complete && (
+                      <div className="w-full max-w-4xl mx-auto bg-emerald-950/30 backdrop-blur-sm rounded-xl border border-green-500/50 p-4">
+                        <div className="flex items-center gap-2 text-green-400 font-medium">
+                          <span>✓</span>
+                          <span>Tempo detection complete</span>
+                        </div>
+                      </div>
+                    )
+                  ) : (
+                    <ProgressBar
+                      label="Detecting tempo"
+                      current={tempoProgress.current}
+                      total={tempoProgress.total}
+                      complete={tempoProgress.complete}
+                    />
+                  )
+                )}
+                
+                {/* Show sentiment progress */}
+                {sentimentProgress && (
+                  sentimentProgress.complete ? (
+                    // Show completion message only if tempo is still working
+                    tempoProgress && !tempoProgress.complete && (
+                      <div className="w-full max-w-4xl mx-auto bg-emerald-950/30 backdrop-blur-sm rounded-xl border border-green-500/50 p-4">
+                        <div className="flex items-center gap-2 text-green-400 font-medium">
+                          <span>✓</span>
+                          <span>Sentiment analysis complete</span>
+                        </div>
+                      </div>
+                    )
+                  ) : (
+                    <ProgressBar
+                      label="Analyzing sentiment"
+                      current={sentimentProgress.current}
+                      total={sentimentProgress.total}
+                      complete={sentimentProgress.complete}
+                    />
+                  )
+                )}
               </div>
             )}
             
@@ -141,40 +211,17 @@ function App() {
                       metadata={playlistMetadata}
                       tracks={playlistData.tracks}
                       runtimeMinutes={playlistData.tracks.reduce((sum, track) => sum + (track.duration_min || 0), 0)}
-                      useRelativeSentiment={useRelativeSentiment}
                     />
                     {(() => {
                       // Check if all tracks have both BPM and sentiment resolved (either value or error)
-                      const allFeaturesLoaded = playlistData.tracks.every(track =>
-                        track.tempo !== undefined && track.sentiment_score !== undefined
-                      );
+                      const allFeaturesLoaded = playlistData.tracks.every(track => {
+                        const hasTempo = track.tempo !== undefined || track.audio_features_error;
+                        const hasSentiment = track.sentiment_score !== undefined || track.sentiment_error;
+                        return hasTempo && hasSentiment;
+                      });
                       
                       return allFeaturesLoaded && (
-                        <>
-                          <ScatterPlot 
-                            playlistData={playlistData} 
-                            useRelativeSentiment={useRelativeSentiment}
-                          />
-                          {/* Sentiment Mode Toggle - Below Graph */}
-                          <div className="flex justify-center items-center gap-4 py-6">
-                            <span className="text-emerald-200 font-medium">Absolute</span>
-                            <button
-                              onClick={() => setUseRelativeSentiment(!useRelativeSentiment)}
-                              className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
-                                useRelativeSentiment ? 'bg-emerald-600' : 'bg-gray-600'
-                              }`}
-                              role="switch"
-                              aria-checked={useRelativeSentiment}
-                            >
-                              <span
-                                className={`inline-block h-6 w-6 transform rounded-full bg-white shadow-lg transition-transform ${
-                                  useRelativeSentiment ? 'translate-x-9' : 'translate-x-1'
-                                }`}
-                              />
-                            </button>
-                            <span className="text-emerald-200 font-medium">Playlist-Relative</span>
-                          </div>
-                        </>
+                        <ScatterPlot playlistData={playlistData} />
                       );
                     })()}
                   </>

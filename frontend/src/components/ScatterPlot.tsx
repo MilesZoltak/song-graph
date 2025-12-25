@@ -67,10 +67,9 @@ const CustomDot = ({ cx, cy, payload }: CustomDotProps) => {
 
 interface ScatterPlotProps {
   playlistData: PlaylistData | null;
-  useRelativeSentiment?: boolean;
 }
 
-function ScatterPlot({ playlistData, useRelativeSentiment = true }: ScatterPlotProps) {
+function ScatterPlot({ playlistData }: ScatterPlotProps) {
   const [isPortrait, setIsPortrait] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -118,17 +117,11 @@ function ScatterPlot({ playlistData, useRelativeSentiment = true }: ScatterPlotP
       track.sentiment_score !== null && 
       track.sentiment_score !== undefined
     )
-    .map((track: Track) => {
-      const sentimentScore = useRelativeSentiment 
-        ? track.sentiment_score! 
-        : ((track as any).raw_sentiment || track.sentiment_score!);
-      return {
-        ...track,
-        x: sentimentScore,
-        y: track.tempo!,
-        sentiment_score: sentimentScore, // Update for tooltip
-      };
-    });
+    .map((track: Track) => ({
+      ...track,
+      x: track.sentiment_score!,
+      y: track.tempo!,
+    }));
 
   if (plotData.length === 0) {
     return (

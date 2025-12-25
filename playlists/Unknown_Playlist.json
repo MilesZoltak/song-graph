@@ -13,10 +13,12 @@
     "track_id": "12TuGHYMlodnW9X2NaL37v",
     "track_url": "https://open.spotify.com/track/12TuGHYMlodnW9X2NaL37v",
     "preview_url": null,
+    "tempo": 123.046875,
+    "audio_features_error": null,
     "lyrics": "Tell me you love me\nIf you feel that way\nWhat'd you keep it inside you for?\nSo under wrap\nDon't leave me this sad sap\nTell me you want me\nJust as much as I've been\nWhat'd you take my whole body for?\nDon't leave me much\nYou leave me this sad such\n\nQuit being shy for me\nHave anyone that you'd like\nThought you had eyes for me\n'Cause they sure made a line\nOnce you realised\nWe're seeing the same night\n\nTell me you'd run me\nRight up outta this town\nTell me you are the single thing\nYou need me some, and I'm going down\n\nQuit being shy for me\nHave anyone that you'd like\nThought you had eyes for me\n'Cause they sure made a line\nOnce you realised\nWe're seeing the same night\n\nSeep by\nJust kicking along without you\nSeep by\nJust kicking along without you\nSeep by\nJust kicking along without you\nSeep by\nJust kicking along without you",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Peach-pit-tell-me-you-love-me-lyrics",
-    "sentiment_score": 0.5,
+    "sentiment_score": 0.4471185326576233,
     "sentiment_chunks": 5,
     "stanza_scores": [
       0.23559266328811646,
@@ -24,11 +26,7 @@
       0.5,
       0.5,
       0.5
-    ],
-    "tempo": 123.046875,
-    "audio_features_error": null,
-    "raw_sentiment": 0.4471185326576233,
-    "normalized_sentiment": 0.5
+    ]
   },
   {
     "title": "The Hunger",
@@ -44,10 +42,12 @@
     "track_id": "7vUuOdabDtkAGRbdZGshsZ",
     "track_url": "https://open.spotify.com/track/7vUuOdabDtkAGRbdZGshsZ",
     "preview_url": null,
+    "tempo": 129.19921875,
+    "audio_features_error": null,
     "lyrics": "Holy eyes\nI never knew I'd beg down at your feet\nHold on tight\nI never knew I'd know much more than this\nOpen sky\nThe wave of pain, the scent of you is bliss\nHungry eyes\nThey stare at me, I know, I know, don't go!\n\nSummertime\nThe taste of saint secretes of perfume mist\nConsole the mind\nI take it in, the lips of pink, I kiss\nLonely sky\nThe more you take, the more that I give in\nHoly eyes\nI never knew, I know, I know, don't go!\n\nHold on to the memory\nYeah, it's all you got\nI know you'll be there\nTo soak up blood lost\nBlood lost, blood lost\n\nDon't go!\n\nHold on to the memory\nYeah, it's all you got\nI know you'll be there\nTo soak up blood lost\nHold on to the memory\nYeah, it's all you got\nI know you'll be there\nTo soak up blood lost\nBlood lost, blood lost\n\nHey, hey, hey, yeah\nHey, hey, hey, yeah\nHey, hey, hey, yeah\nHey, hey, hey, yeah, huh\nOoh-ah, ooh, ooh-ah\nOoh-ah, ooh-ah, ooh\nOoh, hey, it's true, yeah\nHey, hey, hey, I miss you",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/The-distillers-the-hunger-lyrics",
-    "sentiment_score": 0.6578772381767707,
+    "sentiment_score": 0.6250478863716126,
     "sentiment_chunks": 5,
     "stanza_scores": [
       0.7883322834968567,
@@ -55,11 +55,7 @@
       0.5,
       0.5,
       0.5
-    ],
-    "tempo": 129.19921875,
-    "audio_features_error": null,
-    "raw_sentiment": 0.6250478863716126,
-    "normalized_sentiment": 0.6578772381767707
+    ]
   },
   {
     "title": "Downstairs",
@@ -78,7 +74,7 @@
     "lyrics": "You can have all I've made and all I've ever known\nYou can have both my lungs if you ask me so\n'Cause I-I-I want to be the one after your own heart\nAnd I-I-I might doubt the process like I doubted the start\n\nSo I'm beggin', oh-oh-oh, mercy\nI'm beggin', oh-oh-oh, mercy\n\nDownstairs, I feel better in the cellar\nDown there, it's some shelter from the weather\nI wear all of my heart on my sleeve\nI'll take what I believe, and I'm hiding it\nDownstairs, I feel better in the cellar\nDown there, it's some shelter from the weather\nI wear all of my heart on my sleeve\nI'll take what I believe, and I'm hiding it\n\nFeeling like I'm nothing, feeling like I'm run down\nWas afraid of nothing, now I'm just ashamed how\nI hide my face from you\n\nSo I'm beggin', oh-oh-oh, mercy\nI'm beggin', oh-oh-oh, mercy\n\nDownstairs, I feel better in the cellar\nDown there, it's some shelter from the weather\nI wear all of my heart on my sleeve\nI'll take what I believe, and I'm hiding it\nDownstairs, I feel better in the cellar\nDown there, it's some shelter from the weather\nI wear all of my heart on my sleeve\nI'll take what I believe, and I'm hiding it\n\nOh, what have I become?\nDirty and wretched one\nAm I unholy land?\nHave I forced your hand?\n\nOh, woah-oh, woah-oh, mercy, yeah\nOh, woah-oh, woah-oh, mercy, yeah\n\nDown there, it's some shelter from the weather\nI wear all of my heart on my sleeve\nI'll take what I believe, and I'm hiding it\nDownstairs, I feel better in the cellar\nDown there, it's some shelter from the weather\nI wear all of my heart on my sleeve\nI'll take what I believe, and I'm hiding it\nDownstairs (You can have), I feel better in the cellar (All I've made)\nDown there, it's some shelter from the weather (All I've ever known)\nI wear (You can have) all of my heart on my sleeve (Both my lungs)\nI'll take what I believe, and I'm hiding it, yeah (If you ask me so, oh)\n\nAnd I'm hiding it, yeah ('Cause I want to be the one)\nAnd I'm hiding it, yeah (After your own heart)\nAnd I'm hiding it, yeah, oh (And I might doubt the process like I doubt the start)\n\nYou can have all I've made and all I've ever known\nYou can have both my lungs if you ask me so\n'Cause I want to be the one after your own heart\nAnd I might doubt the process like I doubt the start",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Twenty-one-pilots-downstairs-lyrics",
-    "sentiment_score": 0.6344595462061879,
+    "sentiment_score": 0.5971679753727384,
     "sentiment_chunks": 9,
     "stanza_scores": [
       0.7778457701206207,
@@ -92,9 +88,7 @@
       0.8043836355209351
     ],
     "tempo": 112.34714673913044,
-    "audio_features_error": null,
-    "raw_sentiment": 0.5971679753727384,
-    "normalized_sentiment": 0.6344595462061879
+    "audio_features_error": null
   },
   {
     "title": "Flood",
@@ -110,10 +104,12 @@
     "track_id": "7mkOTx13FFvCad61vbAIcT",
     "track_url": "https://open.spotify.com/track/7mkOTx13FFvCad61vbAIcT",
     "preview_url": null,
+    "tempo": 117.45383522727273,
+    "audio_features_error": null,
     "lyrics": "I wanna give up but my brains too proud\nWheel in the mud, it keeps spinning out\nBreathing the dust, it’s 'bout time you found out\nWe oughta live like we’re gonna die\nYou know that all of this is borrowed, right?\n\nSo burn it up like the last year, make it go fast\nGive it all up from the palm of your hands\nI’m sorry I’m like this, I don’t get to choose\nSorry I’m not like you\n\nFearing a flood will wipe us out\nOur poisonous blood and bank accounts\nBut if you want, if you call\nI would make it up to you somehow\nI thought you would call\nSo I could it make it up to you somehow\nTo you somehow, I thought\n\nSo burn it up like the last year, make it go fast\nGive it all up from the palm of your hands\nI’m sorry I’m like this, I don’t get to choose\nSorry I’m not like you\n\nSorry I’m not\nSorry I’m not like you\nSorry I’m not\n\nWe’re all avoiding disastеr and hoping it lasts\nNobody knows whatever’s coming to pass\n\nSo burn it up like thе last year, make it go fast\nGive it all up from the palm of your hands\nI’m sorry I’m like this, I don’t get to choose\nSorry I’m not like you\nSo burn it up like the last year, make it go fast\nGive it all up from the palm of your hands\nI’m sorry I’m like this, I don’t get to choose\nSorry I’m not like you\n\nFearing a flood will wipe us out",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Flycatcher-flood-lyrics",
-    "sentiment_score": 0.32023868247767323,
+    "sentiment_score": 0.24229592510632106,
     "sentiment_chunks": 7,
     "stanza_scores": [
       0.14026200771331787,
@@ -123,11 +119,7 @@
       0.08897820115089417,
       0.5,
       0.16598546504974365
-    ],
-    "tempo": 117.45383522727273,
-    "audio_features_error": null,
-    "raw_sentiment": 0.24229592510632106,
-    "normalized_sentiment": 0.32023868247767323
+    ]
   },
   {
     "title": "Sinking Feeling",
@@ -146,7 +138,7 @@
     "lyrics": "I wanna take my time\nI wanna meet you in the moment\nBut it's hard sometimes\nI get lost online\nI wanna open up\nAnd maybe show you some emotion\nBut it's hard to find\n\nI get caught inside a\nSinking feeling\nSomething's missing\nOverthinking\nAll that I never said\nSinking feeling\nSomething's missing\nOvertaking\nWhy does it never end?\n\nOver neurotic\nI got this hole in my pocket\nFeels like I'm losing you all over again\nTried to escape it\nBut all the meds I've been taking\nAre shaking walls up in the back of my head\n\nAnd now I got this\nSinking feeling\nSomething's missing\nOvertaking\nEverything I am\nBring me back\nPull me out of this\nSinking feeling\nSomething's missing\nOvertaking\nEverything I am\nBring me back\nPull me out of this\n(Pull me out again)\n\nAnother love I lost\nAnother hole in my reflection\nAnd the illusion breaks\nNo, I've never seen that face\nI wanna show you off\nI wanna show you some affection\nAn elusive love\nI watch it turn to dust\n\nOver neurotic\nI got this hole in my pocket\nFeels like I'm losing you all over again\nTried to escape it\nBut all the meds I've been taking\nAre shaking walls up in the back of my head\n\nAnd now I got this\nSinking feeling\nSomething's missing\nOvertaking\nEverything I am\nBring me back\nPull me out of this\nSinking feeling\nSomething's missing\nOvertaking\nEverything I am\nBring me back\nPull me out of this hole\n\nAnd into your arms\nCan't leave it alone\nI always take it too far\nPull me into this life\nAnd out of my head\nDon't leave me behind\nI didn't mean what I said\n\nAnd now I got this\nSinking feeling\nSomething's missing\nOvertaking\nEverything I am\nBring me back\nPull me out of this\nSinking feeling\nSomething's missing\nOvertaking\nEverything I am\nBring me back\nPull me out of this hole\n\n(Sinking feeling)\nAnd into your arms\nCan't leave it alone\nI always take it too far\nPull me into this life (Sinking feeling)\nAnd out of my head\nDon't leave me behind\nI didn't mean what I said\n\nAnd now I got this\nSinking feeling\nSomething's missing\nOvertaking\nEverything I am\nBring me back\nPull me out of this",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Leap-uk-sinking-feeling-lyrics",
-    "sentiment_score": 0.2649980319357031,
+    "sentiment_score": 0.16950879991054535,
     "sentiment_chunks": 11,
     "stanza_scores": [
       0.5,
@@ -162,9 +154,7 @@
       0.13902437686920166
     ],
     "tempo": 99.38401442307692,
-    "audio_features_error": null,
-    "raw_sentiment": 0.16950879991054535,
-    "normalized_sentiment": 0.2649980319357031
+    "audio_features_error": null
   },
   {
     "title": "Heavy",
@@ -180,10 +170,12 @@
     "track_id": "7bOi2P9koS8GKmGBc8wjzU",
     "track_url": "https://open.spotify.com/track/7bOi2P9koS8GKmGBc8wjzU",
     "preview_url": null,
+    "tempo": 129.19921875,
+    "audio_features_error": null,
     "lyrics": "Called you up when I saw it\nTook a breath, went and walked it off\nSaid, \"It's fine, don't you worry\"\nHard to see when it's blurry, oh (Blurry, oh)\nTwo weeks gone, now I'm falling\nWhen will night turn to morning\nEmptied out all of my mind\nHold me close, wanna rewind\n\nTell me, tell me it's not that heavy\nLie to my face and beg me not to cry\nAnd not to hide, but just don't tell me it's alright\n\nHaven't bought what you sold me\nYour hope rings like a constant shout\nHelp me out of this cycle\nWanna swap how we think for the rest\n\nTell me, tell me it's not that heavy\nLie to my face and beg me not to cry\nSay it's alright, and we'll let it slide\nTell me, tell me it's not that heavy\nLie to my face and beg me not to cry\nSay it's alright, and we'll let it slide\n\nCall it off, I'm so sick of crawling\nNot your fault, see you in the morning\nWill regret never saying something\nWatch me cry, yeah, it's all or nothing\nTake it all, take it all!\n\nTell me, tell me it's not that heavy\nLie to my face and beg me not to cry\nAnd tell me, tell me it's not that heavy\nTell me that you don't lie awake and think about it too",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Florence-road-heavy-lyrics",
-    "sentiment_score": 0.4256470942719564,
+    "sentiment_score": 0.36558042963345844,
     "sentiment_chunks": 6,
     "stanza_scores": [
       0.5,
@@ -192,11 +184,7 @@
       0.5,
       0.04405060410499573,
       0.5
-    ],
-    "tempo": 129.19921875,
-    "audio_features_error": null,
-    "raw_sentiment": 0.36558042963345844,
-    "normalized_sentiment": 0.4256470942719564
+    ]
   },
   {
     "title": "Weightless",
@@ -212,10 +200,12 @@
     "track_id": "4UROs7AM5VR3G4K3IVaKMj",
     "track_url": "https://open.spotify.com/track/4UROs7AM5VR3G4K3IVaKMj",
     "preview_url": null,
+    "tempo": 143.5546875,
+    "audio_features_error": null,
     "lyrics": "Everything I see's so fucking bleak\nI wanna go to sleep\nFor weeks on end with no one even realizing I'm gone\nAnd they can move along, I'll drop out of the race\nI wanna try to better situations I create\nAnd clear my fucking brain\nOf all the useless noise, they pump out to destroy\nNever making an escape\nI need to take break, before I fucking break\nI need some peace and quiet, won't you help me?\n\nTake me back, I wanna feel alive again\nTake me back, I wanna feel the weightlessness\n\nRemember how they told you you'd be great?\nGrow up and make a change?\nThey promised it'd be simple then they tore it all away\nNow every single day's a bill that you can't pay\nYou scroll your life away until there's nothing\n\nTake me back, I wanna feel alive again\nTake me back, I wanna feel the weightlessness\nTake me back, I wanna feel alive again\nTake me back, I wanna feel the weightlessness\n\nAnd we could float away (You'll be great, you'll be great then they'll take it all away)\nWe could float away (Then you fake, then you fake, then you fake it every day)\nWe could float away, oh, oh ('Til you hate, 'til you hate everything that comes your way, so you're break, so you're breaking down again)\nWe could float away (You’ll be great, you’ll be great then they’ll take it all away)\nWe could float away (Then you fake, then you fake, then you fake it every day)\nWe could float away, oh, oh ('Til you hate, 'til you hate everything that comes your way, so you're break—, so you're breaking down again)\n\nTake me back, I wanna feel alive again\nTake me back, I wanna feel the weightlessness\nTake me back, I wanna feel alive again\nTake me back, I wanna feel the weightlessness",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Weakened-friends-weightless-lyrics",
-    "sentiment_score": 0.45917956609794525,
+    "sentiment_score": 0.4025861819585164,
     "sentiment_chunks": 6,
     "stanza_scores": [
       0.03402984142303467,
@@ -224,11 +214,7 @@
       0.5,
       0.310777485370636,
       0.5
-    ],
-    "tempo": 143.5546875,
-    "audio_features_error": null,
-    "raw_sentiment": 0.4025861819585164,
-    "normalized_sentiment": 0.45917956609794525
+    ]
   },
   {
     "title": "i can see my house from here",
@@ -244,21 +230,19 @@
     "track_id": "50mGQtuf01ouYPWbGg8DOz",
     "track_url": "https://open.spotify.com/track/50mGQtuf01ouYPWbGg8DOz",
     "preview_url": null,
+    "tempo": 123.046875,
+    "audio_features_error": null,
     "lyrics": "All of these fountains\nLook frozen in time from where we fly\nBut we're not too high\nTo be counting miles 'til we land\nIt could take ages\n'Til we hit the tarmac\nTouch that rubber to road\nAre you anxious? Don't be\n\n'Cause I can see my house from here\nWatch my life appear\nThrough the window, past the wing\nI see it so clear\nYeah, I can see my house from here\nA swimming pool half full of tears\nShed for you\nAll shed for you\nOh, just for you, dear\n\nSuch a funny feeling\nSwitching on to eastern time\nAt five-hundred miles, wе're screaming\nPull your headphonеs down and you ask\nWhat you doing on a flight like this?\n(Are you stressed?) Are you rushed? (Yeah)\nHow you feeling on a night like this?\n(Are you stressed?) Are you crushed? (Yeah)\n\nI can see my house from here\nWatch my life appear\nThrough the window, past the wing\nI see it so clear\nYeah, I can see my house from here\nA swimming pool half full of tears\nShed for you\nAll shed for you\nOh, just for you, dear",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Hunny-i-can-see-my-house-from-here-lyrics",
-    "sentiment_score": 0.6941558130454254,
+    "sentiment_score": 0.6701587736606598,
     "sentiment_chunks": 4,
     "stanza_scores": [
       0.5,
       0.8457850217819214,
       0.5,
       0.8348500728607178
-    ],
-    "tempo": 123.046875,
-    "audio_features_error": null,
-    "raw_sentiment": 0.6701587736606598,
-    "normalized_sentiment": 0.6941558130454254
+    ]
   },
   {
     "title": "Bowery (feat. Kings of Leon)",
@@ -280,7 +264,7 @@
     "lyrics": "Aw, sorry, fuck, my—\nOne, two, three, four\n\nYoung man, there's a place you can go, you can hide\nI know you'll never be fully done or fully satisfied\nYou want the world, want the girl, everything in between\nAnd she was sitting next to me last night at the Bowery\nSick to her stomach as she sipped gin and tonic\nTelling me she'd rather be dead than sleep alone\nI told her that she's everything that I lack deep inside\nThat I'll always see her in the passenger seat\nOf that black two-seater was parked out in the rain\n\nYou picked the wrong one\nIf you're in it for the long run\n'Cause I got the passion\nBut I don't give it away\nBut when the time's right\nI'm a hell of a good night\nI'll make you burn bright\nAs the heat of the day\n\nBroke down, out of gas, underneath the overpass\nThought we'd have a look around my old stomping ground\nGirl so pretty, won't you leave the city for a while?\nThumbed a ride up the road, winter winds blowing cold\n\"Jesus is Lord\" up ahead on the billboard\nBut you're not sure, it shows when you roll your eyes\n\nYou picked the wrong one\nIf you're in it for the long run\nAnd I got the passion\nBut I don't give it away\nBut when the time's right\nI'm a hell of a good night\nI'll make you burn bright\nAs the heat of the day\n\n\nYou picked the wrong one\nIf you're in it for the long run\nI got the passion\nBut I don't give it away\nBut when the time's right\nI'm a hell of a good night\nI'll make you burn bright\nAs the heat of the day",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Zach-bryan-bowery-lyrics",
-    "sentiment_score": 0.5909589766045563,
+    "sentiment_score": 0.5472422301769256,
     "sentiment_chunks": 5,
     "stanza_scores": [
       0.5,
@@ -288,9 +272,7 @@
       0.5,
       0.5,
       0.5
-    ],
-    "raw_sentiment": 0.5472422301769256,
-    "normalized_sentiment": 0.5909589766045563
+    ]
   },
   {
     "title": "Strangers",
@@ -306,12 +288,10 @@
     "track_id": "5Cc0Pe8p7c2OJxMj07ywvc",
     "track_url": "https://open.spotify.com/track/5Cc0Pe8p7c2OJxMj07ywvc",
     "preview_url": null,
-    "tempo": 103.359375,
-    "audio_features_error": null,
     "lyrics": "\"God is telling you and I there is death, for all of us\nBut then we find that the scriptures also tell us that we have a great promise, that there is a better place for those who believe in the lord Jesus Christ\"\n\nIn your basement, I grow cold\nThinking back to what I was always told\n\"Don't talk to strangers or you might fall in love\"\nFreezer bride, your sweet divine\nYou devour like smoked bovine hide\nHow funny, I never considered myself tough\nYou're so handsome, walking over to me now\n\nI tried to be good\nAm I no good?\nAm I no good?\nAm I no good?\nWith my memory restricted to a Polaroid in evidence\nI just wanted to be yours\nCan I be yours?\nCan I be yours?\nJust tell me I'm yours\nIf I'm turning in your stomach and I'm making you feel sick\n\nOh, no, no, no\nNo, no\nNo, no\n\nWhen my mother sees me on the side\nOf a milk carton in Winn-Dixie's dairy aisle\nShe'll cry and wait up for me\nWe'll make love in your attic all night\nEuphoric in some strange delight\nI'm happier here 'cause he told me I should be, oh\nYou're so handsome when I'm all over your mouth\n(When I'm all over your mouth, when I'm all over your mouth)\n\nI tried to be good\nAm I no good?\nAm I no good?\nAm I no good?\nWith my memory restricted to a Polaroid in evidence\nI just wanted to be yours\nCan I be yours?\nCan I be yours?\nJust tell me I'm yours\nIf I'm turning in your stomach and I'm making you feel sick\nAm I making you feel sick?\n\nAh\nAm I making you feel sick?\nAm I making you feel\nAm I making you feel sick?\nAm I making you feel\nAm I making you feel sick?\nAm I making you feel sick?\nAm I making you feel sick?\nAm I making you feel sick?\nNo\n\nFound you just to tell you that I made it real far\nAnd that I never blamed you for loving me the way that you did\nWhile you were torn apart\nI would still wait with you there\nDon't think about it too hard\nOr you'll never sleep a wink at night again\nDon't worry 'bout me and these green eyes\nMama, just know that I love you (I do)\nAnd I'll see you when you get here",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Ethel-cain-strangers-lyrics",
-    "sentiment_score": 0.551276523676345,
+    "sentiment_score": 0.5031301847526005,
     "sentiment_chunks": 7,
     "stanza_scores": [
       0.7716827094554901,
@@ -322,8 +302,8 @@
       0.10464203357696533,
       0.8787889182567596
     ],
-    "raw_sentiment": 0.5031301847526005,
-    "normalized_sentiment": 0.551276523676345
+    "tempo": 103.359375,
+    "audio_features_error": null
   },
   {
     "title": "Well, Whatever It Was",
@@ -339,18 +319,16 @@
     "track_id": "6vnNJbgUbg8h0qkZO2FC4L",
     "track_url": "https://open.spotify.com/track/6vnNJbgUbg8h0qkZO2FC4L",
     "preview_url": null,
-    "tempo": 129.19921875,
-    "audio_features_error": null,
     "lyrics": "Had the worst day ever so far\nGot run over by my dream car\nSpent forever in the ER\nSlowly going insane\nLost my job at Little Caesars\nDrinking whiskey 'cause my teeth hurt\nMy tuxedo was a t-shirt\nBut, you know what they say\nWell, whatever it was (I'll live without it)\nYeah, whatever you are (Can't seem to care)\nSee, it's only because (Forgot about it)\nSo no matter how far (I'll meet you there)\nWell, whatever it was (I'll live without it)\nYeah, whatever you are (Can't seem to care)\nSee, it's only because (Forgot about it)\nSo no matter how far (I'll meet you thеre)\nPush the boulder up thе mountain\nThrow you pennies in the fountain\nAnd your blessings you'll be counting\nBut you're paying to play\nAs the darkness was surrounding\nAnd my heart began a pounding\nYou could feel the tension mounting\nAnd it never did break\nWell, whatever it was (I'll live without it)\nYeah, whatever you are (Can't seem to care)\nSee, it's only because (Forgot about it)\nSo no matter how far (I'll meet you there)\nWell, whatever it was (I'll live without it)\nYeah, whatever you are (Can't seem to care)\nSee, it's only because (Forgot about it)\nSo no matter how far (I'll meet you there)",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Joyce-manor-well-whatever-it-was-lyrics",
-    "sentiment_score": 0.20428489541167952,
+    "sentiment_score": 0.07710158824920654,
     "sentiment_chunks": 1,
     "stanza_scores": [
       0.07710158824920654
     ],
-    "raw_sentiment": 0.07710158824920654,
-    "normalized_sentiment": 0.20428489541167952
+    "tempo": 129.19921875,
+    "audio_features_error": null
   },
   {
     "title": "Pathetic",
@@ -366,12 +344,10 @@
     "track_id": "1il5PvAsecPgrjAgb1f2ee",
     "track_url": "https://open.spotify.com/track/1il5PvAsecPgrjAgb1f2ee",
     "preview_url": null,
-    "tempo": 129.19921875,
-    "audio_features_error": null,
     "lyrics": "Yeah I’m pathetic and it shows\nI’m not ready to let you go\nBut I will try cause I know you won't\nYou’ll never come around\nFool me once and I’ll brush it off\nFool me three times I’ll say it's fine\nFool me for the rest of my life\nI’m overdue\n\nAnd you won't go away you won’t\nI know it's not your fault\nI’m stuck it's true and I don't even know you\nBut it's true I can't move past you\n\nI know it’s dead there's no use to wait\nBut I can't lie I still miss your face\nSome may say I have lost my mind, I think it's time\nBut I still can't watch Into The Wild\nI promised to wait until you're mine\nUntil then I’ll make believe that I’ve moved on\n\nAnd you won't go away no matter how far you are\nI know it's not your fault\nI’m stuck it’s true and I don't even know you\nBut it's true\nI can't move past you\n\nJust leave me alone\nI’ll never move past you\nYeah I’m pathetic and it shows",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Pollyanna-usa-pathetic-lyrics",
-    "sentiment_score": 0.22090263718750852,
+    "sentiment_score": 0.10412689447402954,
     "sentiment_chunks": 5,
     "stanza_scores": [
       0.054918497800827026,
@@ -380,8 +356,8 @@
       0.12856686115264893,
       0.03478500247001648
     ],
-    "raw_sentiment": 0.10412689447402954,
-    "normalized_sentiment": 0.22090263718750852
+    "tempo": 129.19921875,
+    "audio_features_error": null
   },
   {
     "title": "Seven Words",
@@ -397,18 +373,16 @@
     "track_id": "794yR2Yl3W1C9XfMCeNdrb",
     "track_url": "https://open.spotify.com/track/794yR2Yl3W1C9XfMCeNdrb",
     "preview_url": null,
-    "tempo": 135.99917763157896,
-    "audio_features_error": null,
     "lyrics": "These seven words I say to you, one by one\nI love you and you have to know\nIf I could change how I'm insane\nIf I could learn to leave my troubles behind\nIt's starting to hurt and I know you moved on\nTelling everyone how I done you so wrong\nCat scratch a beast\nMy words that made you bleed\nNow I face tomorrow\nNow I face tomorrow\nIn time, we'll both be free from this ball and chain\nHanging on to things\nI want you mostly in the morning\nWhen my soul is weak from dreaming\nWhen the dust has cleared\nAnd you forget that I'm here\nHanging on\nI've been hanging\nWho had the last word\nI'm telling you first\nWho had the last word\nI'm telling you first\nThese seven words are no longer mine\nWho am I but a stranger who took you down\nIt's starting to burn and I wanna go home\nOnly home I've known\nLost in the storm\nIt had to be seven words to set us free\nNow I face tomorrow\nNow I face tomorrow\nNow I face tomorrow",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Weyes-blood-seven-words-lyrics",
-    "sentiment_score": 0.5484294455979553,
+    "sentiment_score": 0.5,
     "sentiment_chunks": 1,
     "stanza_scores": [
       0.5
     ],
-    "raw_sentiment": 0.5,
-    "normalized_sentiment": 0.5484294455979553
+    "tempo": 135.99917763157896,
+    "audio_features_error": null
   },
   {
     "title": "Digger",
@@ -424,18 +398,16 @@
     "track_id": "4fRi1frbN5fPGS0PwfpuU4",
     "track_url": "https://open.spotify.com/track/4fRi1frbN5fPGS0PwfpuU4",
     "preview_url": null,
-    "tempo": 86.1328125,
-    "audio_features_error": null,
     "lyrics": "Digger, you're no superstar\nPurpose on the arm, but family in the heart\nDigger, fighting with the cards\nPatterns in the noise and questions that are hard\nA rock in retrograde\nSays endure pain today\nAll things must evolve or fade\nThe tarot cards made me laugh\nA guardian on the path\nHard to dream like I need to\nSubtlety as a way through\nDigger, digging 'til he starves\nSlipped away from silent, rest and carved the arm\nDigger, fighting with the art\nHand off fate to chaos, something to outsmart\nThat's why I hate you\nThat's why I hate you\nThat's why I hate you\nThat's why I hate you\nYou're in my dreaming space\nErase these quivering weights\nAnd replace with aphantasia's grace\nAll thoughts filter down\nTo voices in the crowd\nShaming for unspoken days\nViolence in the things they whisper\nThen the sound gets louder\nDigger, always in the game\nNever was a game and answers always hang\nDigger, find another way\nArrows 'round the body, sleep and dream in gray\nThat's why I love you\nThat's why I love you\nThat's why I love you\nThat's why I love you\nShouldn't go out in the darkness\nShouldn't go out in the darkness\nShouldn't go out in the darkness\nShouldn't go out in the darkness\nShouldn't go out in the darkness\nShouldn't go out in the dark",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Great-grandpa-digger-lyrics",
-    "sentiment_score": 0.5484294455979553,
+    "sentiment_score": 0.5,
     "sentiment_chunks": 1,
     "stanza_scores": [
       0.5
     ],
-    "raw_sentiment": 0.5,
-    "normalized_sentiment": 0.5484294455979553
+    "tempo": 86.1328125,
+    "audio_features_error": null
   },
   {
     "title": "Crowbar",
@@ -451,12 +423,10 @@
     "track_id": "1uy1GgGTNRvSP3961dRH5p",
     "track_url": "https://open.spotify.com/track/1uy1GgGTNRvSP3961dRH5p",
     "preview_url": null,
-    "tempo": 117.45383522727273,
-    "audio_features_error": null,
     "lyrics": "I left your heart of glass in my unmade bed\nIn the right time, you could shine so bright in my doubtful eyes\nAnd I imprint all your ideas on mine\nI move awkwardly at the speed of light\n\nMaybe it's easier to be afraid\nDrenched in tragedy, man-made\nAnd my compass is an antique\nBut if I'm not back soon\nDon't come looking for me\n\nYou can take it pretty far on a prayer that's pale and synthetic\nBending my crowbar with tension that's telekinetic\nA paradox poetic, you get choked up reading the classics\nYour pride'll take a gluttonous bite, a stupid question, I'd rather not ask it\n\nI take a sip of something I can barely taste\nDull as dusk, with a skull and crossbones to bring us luck\nAnd I, I know that you can't read my mind\nI swear I said the same thing a hundred times\n\nMaybe it's harder than it should be\nVariations on a theme\nI could wear it right on my sleeve\nWhen an antagonist emerges, don't blame me\n\nYou can take it pretty far on a prayer that's pale and synthetic\nBending my crowbar with tension that's telekinetic\nA paradox poetic, you get choked up reading the classics\nYour pride'll take a gluttonous bite, a stupid question, I'd rather not ask it\n\nA stupid question, I'd rather not ask it\nA stupid question, I'd rather not ask it",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Waxahatchee-crowbar-lyrics",
-    "sentiment_score": 0.37085636078799833,
+    "sentiment_score": 0.3032876636300768,
     "sentiment_chunks": 7,
     "stanza_scores": [
       0.5,
@@ -467,8 +437,8 @@
       0.16151300072669983,
       0.07934451103210449
     ],
-    "raw_sentiment": 0.3032876636300768,
-    "normalized_sentiment": 0.37085636078799833
+    "tempo": 117.45383522727273,
+    "audio_features_error": null
   },
   {
     "title": "First Touch",
@@ -484,12 +454,10 @@
     "track_id": "5UZNu7yoVADdteuDRR1qND",
     "track_url": "https://open.spotify.com/track/5UZNu7yoVADdteuDRR1qND",
     "preview_url": null,
-    "tempo": 161.4990234375,
-    "audio_features_error": null,
     "lyrics": "When I woke up in the morning, that was only for you\nSaw signs on the buildings saying, \"Everything's coming true\"\nLights on these city streets waking me up\nThink I love you, but it's never enough\n\nAnd when I woke up in the morning, that was only for you\nWalked through the city, swore I was bulletproof\nMaking fake names and jobs\nAnd living for a lost cause\n\nI remember where we first touched\nI remember where we first fell in love\nI remember wherе we first touched\n\nWhen I wokе up in the morning, that was only for you\nTook your time calling me pretty, I took mine to say I need you\nLiving in the basement was never enough\n'Cause life for us meant never getting stuck\n\nAnd when I woke up in the morning, that was only for you\nWalked through the city, swore I was bulletproof\nMaking fake names and jobs\nAnd living for a lost cause\n\nI remember where we first touched\nI remember where we first fell in love\nI remember where we first touched\n\nLove turns into\nRemember?\nLove turns into\nRemember?\nLove turns into\nRemember?\nLove turns into\n\nRemember where we first touched?\nRemember where we first fell in love?\nRemember where we first touched?\nRemember where we first fell in love?\nI remember",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Francis-of-delirium-first-touch-lyrics",
-    "sentiment_score": 0.5615179504806195,
+    "sentiment_score": 0.5144221037626266,
     "sentiment_chunks": 8,
     "stanza_scores": [
       0.8702203333377838,
@@ -501,8 +469,8 @@
       0.5,
       0.5
     ],
-    "raw_sentiment": 0.5144221037626266,
-    "normalized_sentiment": 0.5615179504806195
+    "tempo": 161.4990234375,
+    "audio_features_error": null
   },
   {
     "title": "Something Is Not Right With Me",
@@ -518,12 +486,10 @@
     "track_id": "6o7qNFKSZQESC1072HhFbO",
     "track_url": "https://open.spotify.com/track/6o7qNFKSZQESC1072HhFbO",
     "preview_url": null,
-    "tempo": 123.046875,
-    "audio_features_error": null,
     "lyrics": "Something is not right with me\nSomething is not right with me\nSomething is not right with me\nHow was I supposed to know?\nSomething is not right with me\nSomething is not right with me\nSomething is not right with me\nTryin' not to let it show\n\nI tried to call you collect\nYou said you would not accept\nYour friends are laughin' 'cause\nNobody uses pay phones\nGave me quarters to select\nSo I'm on the jukebox again\nPeople dancin'\nShoulda never chose \"Girlfriend\"\n\nSomething is not right with me\nSomething is not right with me\nSomething is not right with me\nHow was I supposed to know?\nSomething is not right with me\nSomething is not right with me\nSomething is not right with me\nI'm trying not to let it show\n\nCrash into the people who're sleepin' late into the evening\nReach behind they can hardly find their spines\nCrash into the people who're sleepin' late into the evening\nReach behind they can hardly find their spines\nCrash into the people who're sleepin' late into the evening\nReach behind they can hardly find their spines\n\nYou said you too like old cars\nI bought a beat up brown Dodge\nIt was smoking but it died in your front yard\nYou follow who's dating who\nBut, but when it comes to you\nOne is pulled a dozen different ways in the mind\n\nSomething is not right with me\nSomething is not right with me\nSomething is not right with me\nHow was I supposed to know?\nSomething is not right with me\nSomething is not right with me\nSomething is not right with me\nI'm tryin' not to let it show",
     "lyrics_source": "genius",
     "genius_url": "https://genius.com/Cold-war-kids-something-is-not-right-with-me-lyrics",
-    "sentiment_score": 0.26782169246297943,
+    "sentiment_score": 0.17344051599502563,
     "sentiment_chunks": 6,
     "stanza_scores": [
       0.07231327891349792,
@@ -533,7 +499,7 @@
       0.2310250997543335,
       0.07634422183036804
     ],
-    "raw_sentiment": 0.17344051599502563,
-    "normalized_sentiment": 0.26782169246297943
+    "tempo": 123.046875,
+    "audio_features_error": null
   }
 ]

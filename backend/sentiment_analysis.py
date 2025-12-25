@@ -196,6 +196,7 @@ def analyze_sentiment_single(track: Dict, sentiment_classifier) -> Dict:
     # Skip if no lyrics
     if not lyrics:
         track['sentiment_score'] = None
+        track['sentiment_error'] = 'No lyrics available'
         track['sentiment_chunks'] = 0
         track['stanza_scores'] = []
         return track
@@ -209,6 +210,7 @@ def analyze_sentiment_single(track: Dict, sentiment_classifier) -> Dict:
         
     except Exception as e:
         track['sentiment_score'] = None
+        track['sentiment_error'] = f'Analysis failed: {str(e)}'
         track['sentiment_chunks'] = 0
         track['stanza_scores'] = []
     

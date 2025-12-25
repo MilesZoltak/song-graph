@@ -27,6 +27,7 @@ export interface Track {
   genius_url?: string | null;
   sentiment_label?: string | null;
   sentiment_score?: number | null;
+  raw_sentiment?: number | null;
   positive_score?: number | null;
   negative_score?: number | null;
   sentiment_chunks?: number | null;
